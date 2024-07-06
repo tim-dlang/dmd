@@ -48,7 +48,7 @@ on:
 jobs:
   main:
     name: Run
-    if: github.repository == 'dlang/dmd'
+    #if: github.repository == 'dlang/dmd'
 
     strategy:
       # Since those tests takes very little time, don't use `fail-fast`.
@@ -165,7 +165,7 @@ jobs:
         # For branches this in the format 'refs/heads/<branch_name>',
         # and for tags it is refs/tags/<tag_name>.
         else
-            echo "branch=${{ github.ref }}" >> $GITHUB_OUTPUT
+            echo "branch=master" >> $GITHUB_OUTPUT
         fi
 
     #########################################

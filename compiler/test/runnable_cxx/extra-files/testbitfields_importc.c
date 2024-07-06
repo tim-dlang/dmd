@@ -50,3 +50,338 @@ struct Issue24592a { unsigned long long a:20, b:20, c:24; };
 struct Issue24592b { unsigned int x; unsigned long long a:20, b:20, c:24; };
 struct Issue24592c { unsigned long long a:20, b:32, c:32, d:32, e:32, f:32; };
 struct Issue24592d { unsigned long long a:10, b:16, c:16, d:16, e:16, f:16; };
+
+struct Test48a { unsigned long long a:48, b:17; };
+struct Test48b { unsigned long long a:48, b:48; };
+
+struct Random1
+{
+unsigned long long x1 : 57;
+unsigned long long x2 : 45;
+unsigned long long x3 : 13;
+unsigned long long x4 : 22;
+unsigned long long x5 : 55;
+unsigned long long x6 : 8;
+unsigned long long x7 : 59;
+unsigned long long x8 : 56;
+unsigned long long x9 : 21;
+unsigned long long x10 : 55;
+unsigned long long x11 : 63;
+unsigned long long x12 : 34;
+unsigned long long x13 : 45;
+unsigned long long x14 : 26;
+unsigned long long x15 : 40;
+unsigned long long x16 : 23;
+unsigned long long x17 : 23;
+unsigned long long x18 : 23;
+unsigned long long x19 : 50;
+unsigned long long x20 : 29;
+unsigned long long x21 : 10;
+unsigned long long x22 : 40;
+unsigned long long x23 : 20;
+unsigned long long x24 : 14;
+unsigned long long x25 : 22;
+unsigned long long x26 : 1;
+unsigned long long x27 : 8;
+unsigned long long x28 : 33;
+unsigned long long x29 : 27;
+unsigned long long x30 : 35;
+unsigned long long x31 : 61;
+unsigned long long x32 : 20;
+};
+
+
+struct Random2
+{
+    unsigned long long x1 : 16;
+unsigned long long x2 : 10;
+unsigned long long x3 : 41;
+unsigned long long x4 : 6;
+unsigned long long x5 : 17;
+unsigned long long x6 : 36;
+unsigned long long x7 : 62;
+unsigned long long x8 : 38;
+unsigned long long x9 : 26;
+unsigned long long x10 : 60;
+unsigned long long x11 : 7;
+unsigned long long x12 : 6;
+unsigned long long x13 : 21;
+unsigned long long x14 : 46;
+unsigned long long x15 : 29;
+unsigned long long x16 : 43;
+unsigned long long x17 : 4;
+unsigned long long x18 : 14;
+unsigned long long x19 : 7;
+unsigned long long x20 : 14;
+unsigned long long x21 : 54;
+unsigned long long x22 : 27;
+unsigned long long x23 : 27;
+unsigned long long x24 : 11;
+unsigned long long x25 : 27;
+unsigned long long x26 : 34;
+unsigned long long x27 : 43;
+unsigned long long x28 : 53;
+unsigned long long x29 : 5;
+unsigned long long x30 : 39;
+unsigned long long x31 : 8;
+unsigned long long x32 : 20;
+
+};
+
+struct Random3
+{
+    unsigned long long x1 : 48;
+unsigned long long x2 : 49;
+unsigned long long x3 : 25;
+unsigned long long x4 : 1;
+unsigned long long x5 : 20;
+unsigned long long x6 : 22;
+unsigned long long x7 : 38;
+unsigned long long x8 : 45;
+unsigned long long x9 : 17;
+unsigned long long x10 : 44;
+unsigned long long x11 : 51;
+unsigned long long x12 : 37;
+unsigned long long x13 : 25;
+unsigned long long x14 : 15;
+unsigned long long x15 : 15;
+unsigned long long x16 : 28;
+unsigned long long x17 : 28;
+unsigned long long x18 : 22;
+unsigned long long x19 : 41;
+unsigned long long x20 : 17;
+unsigned long long x21 : 48;
+unsigned long long x22 : 4;
+unsigned long long x23 : 27;
+unsigned long long x24 : 10;
+unsigned long long x25 : 37;
+unsigned long long x26 : 5;
+unsigned long long x27 : 62;
+unsigned long long x28 : 41;
+unsigned long long x29 : 44;
+unsigned long long x30 : 6;
+unsigned long long x31 : 60;
+unsigned long long x32 : 27;
+
+};
+
+struct Random4
+{
+unsigned long long x1 : 54;
+unsigned long long x2 : 21;
+unsigned long long x3 : 27;
+unsigned long long x4 : 9;
+unsigned long long x5 : 42;
+unsigned long long x6 : 63;
+unsigned long long x7 : 53;
+unsigned long long x8 : 59;
+unsigned long long x9 : 43;
+unsigned long long x10 : 39;
+unsigned long long x11 : 31;
+unsigned long long x12 : 3;
+unsigned long long x13 : 53;
+unsigned long long x14 : 46;
+unsigned long long x15 : 31;
+unsigned long long x16 : 17;
+unsigned long long x17 : 3;
+unsigned long long x18 : 7;
+unsigned long long x19 : 33;
+unsigned long long x20 : 50;
+unsigned long long x21 : 10;
+unsigned long long x22 : 60;
+unsigned long long x23 : 59;
+unsigned long long x24 : 47;
+unsigned long long x25 : 63;
+unsigned long long x26 : 56;
+unsigned long long x27 : 23;
+unsigned long long x28 : 43;
+unsigned long long x29 : 61;
+unsigned long long x30 : 19;
+unsigned long long x31 : 6;
+unsigned long long x32 : 50;
+
+};
+
+struct Random5
+{
+    unsigned int x1 : 7;
+unsigned int x2 : 32;
+unsigned int x3 : 26;
+unsigned int x4 : 16;
+unsigned int x5 : 32;
+unsigned int x6 : 15;
+unsigned int x7 : 10;
+unsigned int x8 : 10;
+unsigned int x9 : 21;
+unsigned int x10 : 9;
+unsigned int x11 : 13;
+unsigned int x12 : 10;
+unsigned int x13 : 22;
+unsigned int x14 : 11;
+unsigned int x15 : 26;
+unsigned int x16 : 24;
+unsigned int x17 : 17;
+unsigned int x18 : 26;
+unsigned int x19 : 9;
+unsigned int x20 : 27;
+unsigned int x21 : 21;
+unsigned int x22 : 3;
+unsigned int x23 : 9;
+unsigned int x24 : 21;
+unsigned int x25 : 26;
+unsigned int x26 : 31;
+unsigned int x27 : 31;
+unsigned int x28 : 23;
+unsigned int x29 : 17;
+unsigned int x30 : 4;
+unsigned int x31 : 8;
+unsigned int x32 : 23;
+
+};
+
+struct Random6
+{
+    unsigned int x1 : 4;
+unsigned int x2 : 2;
+unsigned int x3 : 7;
+unsigned int x4 : 3;
+unsigned int x5 : 16;
+unsigned int x6 : 16;
+unsigned int x7 : 12;
+unsigned int x8 : 4;
+unsigned int x9 : 24;
+unsigned int x10 : 24;
+unsigned int x11 : 13;
+unsigned int x12 : 13;
+unsigned int x13 : 2;
+unsigned int x14 : 6;
+unsigned int x15 : 4;
+unsigned int x16 : 19;
+unsigned int x17 : 32;
+unsigned int x18 : 12;
+unsigned int x19 : 13;
+unsigned int x20 : 20;
+unsigned int x21 : 14;
+unsigned int x22 : 21;
+unsigned int x23 : 8;
+unsigned int x24 : 8;
+unsigned int x25 : 19;
+unsigned int x26 : 7;
+unsigned int x27 : 30;
+unsigned int x28 : 4;
+unsigned int x29 : 10;
+unsigned int x30 : 5;
+unsigned int x31 : 26;
+unsigned int x32 : 13;
+
+};
+
+struct Random7
+{
+    unsigned int x1 : 6;
+unsigned int x2 : 32;
+unsigned int x3 : 15;
+unsigned int x4 : 21;
+unsigned int x5 : 16;
+unsigned int x6 : 27;
+unsigned int x7 : 25;
+unsigned int x8 : 7;
+unsigned int x9 : 18;
+unsigned int x10 : 5;
+unsigned int x11 : 20;
+unsigned int x12 : 20;
+unsigned int x13 : 11;
+unsigned int x14 : 23;
+unsigned int x15 : 6;
+unsigned int x16 : 10;
+unsigned int x17 : 3;
+unsigned int x18 : 18;
+unsigned int x19 : 29;
+unsigned int x20 : 16;
+unsigned int x21 : 6;
+unsigned int x22 : 5;
+unsigned int x23 : 23;
+unsigned int x24 : 24;
+unsigned int x25 : 11;
+unsigned int x26 : 20;
+unsigned int x27 : 27;
+unsigned int x28 : 20;
+unsigned int x29 : 25;
+unsigned int x30 : 21;
+unsigned int x31 : 1;
+unsigned int x32 : 30;
+
+};
+
+struct Random8
+{unsigned int x1 : 20;
+unsigned int x2 : 15;
+unsigned int x3 : 19;
+unsigned int x4 : 3;
+unsigned int x5 : 9;
+unsigned int x6 : 11;
+unsigned int x7 : 10;
+unsigned int x8 : 27;
+unsigned int x9 : 15;
+unsigned int x10 : 29;
+unsigned int x11 : 14;
+unsigned int x12 : 25;
+unsigned int x13 : 19;
+unsigned int x14 : 19;
+unsigned int x15 : 2;
+unsigned int x16 : 21;
+unsigned int x17 : 4;
+unsigned int x18 : 31;
+unsigned int x19 : 5;
+unsigned int x20 : 9;
+unsigned int x21 : 3;
+unsigned int x22 : 27;
+unsigned int x23 : 32;
+unsigned int x24 : 13;
+unsigned int x25 : 15;
+unsigned int x26 : 27;
+unsigned int x27 : 32;
+unsigned int x28 : 7;
+unsigned int x29 : 15;
+unsigned int x30 : 32;
+unsigned int x31 : 4;
+unsigned int x32 : 2;
+
+};
+
+struct Random9
+{
+    unsigned int x1 : 15;
+unsigned int x2 : 22;
+unsigned int x3 : 5;
+unsigned int x4 : 23;
+unsigned int x5 : 32;
+unsigned int x6 : 14;
+unsigned int x7 : 17;
+unsigned int x8 : 15;
+unsigned int x9 : 10;
+unsigned int x10 : 30;
+unsigned int x11 : 7;
+unsigned int x12 : 28;
+unsigned int x13 : 16;
+unsigned int x14 : 9;
+unsigned int x15 : 17;
+unsigned int x16 : 19;
+unsigned int x17 : 7;
+unsigned int x18 : 21;
+unsigned int x19 : 27;
+unsigned int x20 : 9;
+unsigned int x21 : 15;
+unsigned int x22 : 27;
+unsigned int x23 : 21;
+unsigned int x24 : 29;
+unsigned int x25 : 21;
+unsigned int x26 : 20;
+unsigned int x27 : 3;
+unsigned int x28 : 3;
+unsigned int x29 : 20;
+unsigned int x30 : 7;
+unsigned int x31 : 4;
+unsigned int x32 : 2;
+
+};
