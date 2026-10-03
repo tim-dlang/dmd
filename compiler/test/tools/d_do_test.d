@@ -1152,11 +1152,11 @@ bool collectExtraSources (in string input_dir, in string output_dir, in string[]
         string command = quoteSpaces(is_cpp_file ? cxxcompiler : ccompiler);
         if (envData.os == "windows") // cl.exe
         {
-            command ~= ` /c /nologo `~curSrc~` /Fo`~curObj;
+            command ~= ` /c /nologo /O2 `~curSrc~` /Fo`~curObj;
         }
         else
         {
-            command ~= " -m"~envData.model~" -c "~curSrc~" -o "~curObj;
+            command ~= " -m"~envData.model~" -c -O2 "~curSrc~" -o "~curObj;
         }
         if (cxxflags)
             command ~= " " ~ cxxflags;

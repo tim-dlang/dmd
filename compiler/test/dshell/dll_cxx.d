@@ -26,17 +26,17 @@ int main()
     {
         Vars.set(`DLL_LIB`, `$OUTPUT_BASE${SEP}mydll.lib`);
         // CXX should be cl
-        dllCmd ~= [`/LD`, `/nologo`, `/Fe` ~ Vars.DLL];
+        dllCmd ~= [`/LD`, `/nologo`, `/O2`, `/Fe` ~ Vars.DLL];
         mainExtra = `$DLL_LIB -dllimport=externalOnly`;
     }
     else version(OSX)
     {
-        dllCmd ~= [`-dynamiclib`, `-fPIC`, `-o`, Vars.DLL, `-lstdc++`];
+        dllCmd ~= [`-dynamiclib`, `-fPIC`, `-O2`, `-o`, Vars.DLL, `-lstdc++`];
         mainExtra = `-fPIC -L-L$OUTPUT_BASE -L$DLL -L-lstdc++ -L--no-demangle`;
     }
     else
     {
-        dllCmd ~= [ `-m` ~ Vars.MODEL, `-shared`, `-fPIC`, `-o`, Vars.DLL ];
+        dllCmd ~= [ `-m` ~ Vars.MODEL, `-shared`, `-fPIC`, `-O2`, `-o`, Vars.DLL ];
         mainExtra = `-fPIC -L-L$OUTPUT_BASE -L$DLL -L-lstdc++ -L--no-demangle`;
     }
 
