@@ -103,10 +103,42 @@ void test19660()
     assert(getSomeValueCPP19660() == 200);
 }
 
+// https://github.com/dlang/dmd/issues/23565
+extern(C++) interface Interface23565
+{
+    int value();
+}
+
+extern(C++) class Base23565
+{
+    void f()
+    {
+    }
+
+    int unused;
+}
+
+extern(C++) class Child23565 : Base23565, Interface23565
+{
+    int value()
+    {
+        return 35;
+    }
+}
+
+extern(C++) int callValueFromCpp23565(Interface23565 value);
+
+void test23565()
+{
+    Interface23565 obj = new Child23565;
+    assert(callValueFromCpp23565(obj) == 42);
+}
+
 void main()
 {
     test22323();
     test19660();
+    test23565();
 
     import binding;
     assert(testExternalImportVar == 0xF1234);

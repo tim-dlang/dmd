@@ -79,3 +79,16 @@ extern "C"
     // tests -extI switch for variables
     EXPORT int testExternalImportVar = 0xF1234;
 }
+
+// https://github.com/dlang/dmd/issues/23565
+struct Interface23565
+{
+    virtual int value() = 0;
+};
+
+int offset23565 = 7;
+
+int callValueFromCpp23565(Interface23565 *value)
+{
+    return value->value() + offset23565;
+}

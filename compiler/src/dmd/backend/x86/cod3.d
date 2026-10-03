@@ -3137,7 +3137,7 @@ void cdgot(ref CGstate cg, ref CodeBuilder cdb, elem* e, ref regm_t pretregs)
  */
 
 @trusted
-void load_localgot(ref CGstate cg, ref CodeBuilder cdb)
+void load_localgot(ref CGstate cg, ref CodeBuilder cdb, regm_t retregs = mBX)
 {
     if (config.exe & (EX_LINUX | EX_FREEBSD | EX_OPENBSD | EX_SOLARIS | EX_HURD)) // note: I32 only
     {
@@ -3147,7 +3147,6 @@ void load_localgot(ref CGstate cg, ref CodeBuilder cdb)
             {
                 localgot.Sflags &= ~GTregcand;     // because this hack doesn't work with reg allocator
                 elem* e = el_var(localgot);
-                regm_t retregs = mBX;
                 codelem(cg,cdb,e,retregs,false);
                 el_free(e);
             }
@@ -3155,7 +3154,6 @@ void load_localgot(ref CGstate cg, ref CodeBuilder cdb)
             {
                 elem* e = el_long(TYnptr, 0);
                 e.Eoper = OPgot;
-                regm_t retregs = mBX;
                 codelem(cg,cdb,e,retregs,false);
                 el_free(e);
             }
@@ -5394,7 +5392,7 @@ void cod3_thunk(Symbol* sthunk,Symbol* sfunc,uint p,tym_t thisty,
         {
             localgot = null;                // no local variables
             CodeBuilder cdbgot; cdbgot.ctor();
-            load_localgot(cgstate,cdbgot);          // load GOT in EBX
+            load_localgot(cgstate,cdbgot, mAX);          // load GOT in EAX
             code* c1 = cdbgot.finish();
             if (c1)
             {
